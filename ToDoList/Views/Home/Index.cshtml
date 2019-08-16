@@ -1,0 +1,15 @@
+<title>Uriel's To Do List</title>
+
+@{
+  Layout = "_Layout";
+}
+@if (User.Identity.IsAuthenticated)
+{
+    <br>
+    <p>Hello @User.Identity.Name</p>
+}
+<h1>Welcome to the To Do List!</h1>
+<hr />
+<p>@Html.ActionLink("See all categories", "Index", "Categories")</p>
+<p>@Html.ActionLink("See all tasks", "Index", "Items")</p>
+<p>@Html.ActionLink("Account", "Index", "Account")</p>
