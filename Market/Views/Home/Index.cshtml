@@ -1,17 +1,12 @@
-@*
 <title>Pierre's Market</title>
 
 @{
   Layout = "_Layout";
 }
-@if (User.Identity.IsAuthenticated)
-{
-    <br>
-    <p>Hello @User.Identity.Name</p>
-}
+
 <h1>Hello Pierre!</h1>
+<br>
+Is the customer ready to place an order? I am!
 <hr />
-<p>@Html.ActionLink("See all categories", "Index", "Categories")</p>
-<p>@Html.ActionLink("See all tasks", "Index", "Items")</p>
-<p>@Html.ActionLink("Account", "Index", "Account")</p>
-*@
+<p>@Html.ActionLink("See Treat Menu", "Index", "Treats")</p>
+<p>@Html.ActionLink("See Flavor Menu", "Index", "Flavors")</p>
