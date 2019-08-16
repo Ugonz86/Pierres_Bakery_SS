@@ -1,8 +1,9 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Market.Models
 {
-  public class MarketContext : DbContext
+  public class MarketContext : IdentityDbContext<ApplicationUser>
   {
     public virtual DbSet<Treat> Treats { get; set; }
     public DbSet<Flavor> Flavors { get; set; }
