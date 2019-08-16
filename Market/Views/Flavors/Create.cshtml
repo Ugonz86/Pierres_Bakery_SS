@@ -4,17 +4,15 @@
 
 @model Market.Models.Flavor
 
-<h2>Add a new flavor</h2>
+<h2>Add a New Flavor</h2>
 <hr />
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Description)
-    @Html.TextBoxFor(model => model.Description)
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
 
-    @*@Html.Label("Select treat")
-    @Html.DropDownList("TreatId")*@
-
-    <input type="submit" value="Add new flavor" class="btn btn-default" />
+    <input type="submit" value="Add New Flavor" class="btn btn-default" />
 }
-<p>@Html.ActionLink("Show all flavors", "Index")</p>
+<hr />
+<p>@Html.ActionLink("Show Flavor Menu", "Index")</p>

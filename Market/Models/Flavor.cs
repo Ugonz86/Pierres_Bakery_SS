@@ -11,8 +11,6 @@ namespace Market.Models
 
         public int FlavorId { get; set; }
         public string Description { get; set; }
-        public int Price { get; set; }
-
         public ICollection<TreatFlavor> Treats { get;}
     }
 }

@@ -3,6 +3,7 @@ using Market.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Market.Controllers
 {
@@ -23,6 +24,7 @@ namespace Market.Controllers
 
     public ActionResult Create()
     {
+      ViewBag.TreatList = _db.Treats.ToList();
       return View();
     }
 
@@ -57,6 +59,29 @@ namespace Market.Controllers
       return RedirectToAction("Index");
     }
 
+
+    public ActionResult AddFlavor(int id)
+    {
+      var thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
+      ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "Description");
+      return View(thisTreat);
+    }
+
+    [HttpPost]
+    public ActionResult AddFlavor(Treat treat, int FlavorId)
+    {
+      if (FlavorId != 0)
+      {
+        _db.TreatFlavor.Add(new TreatFlavor() { FlavorId = FlavorId, TreatId = treat.TreatId });
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+
+
+
+
     public ActionResult Delete(int id)
     {
       var thisTreat = _db.Treats.FirstOrDefault(category => category.TreatId == id);
@@ -68,6 +93,15 @@ namespace Market.Controllers
     {
       var thisTreat = _db.Treats.FirstOrDefault(category => category.TreatId == id);
       _db.Treats.Remove(thisTreat);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    [HttpPost]
+    public ActionResult DeleteTreat(int joinId)
+    {
+      var joinEntry = _db.TreatFlavor.FirstOrDefault(entry => entry.TreatFlavorId == joinId);
+      _db.TreatFlavor.Remove(joinEntry);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

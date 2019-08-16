@@ -4,11 +4,15 @@
 
 @model Market.Models.Treat
 
-<h4>Add a new treat</h4>
+<h4>Add a New Treat</h4>
+<hr />
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
     <input type="submit" value="Add new treat" />
+
+
 }
+<hr />
 <p>@Html.ActionLink("Show all treats", "Index")</p>

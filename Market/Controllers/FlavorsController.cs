@@ -23,7 +23,9 @@ namespace Market.Controllers
 
     public ActionResult Create()
     {
-      ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Name");
+      // ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Name");
+      // return View();
+      ViewBag.FlavorList = _db.Flavors.ToList();
       return View();
     }
 
@@ -101,7 +103,7 @@ namespace Market.Controllers
     }
 
     [HttpPost]
-    public ActionResult DeleteTreat(int joinId)
+    public ActionResult DeleteFlavor(int joinId)
     {
       var joinEntry = _db.TreatFlavor.FirstOrDefault(entry => entry.TreatFlavorId == joinId);
       _db.TreatFlavor.Remove(joinEntry);
