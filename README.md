@@ -1,6 +1,6 @@
-# APP NAME
+# Pierre's Market
 
-#### _DESCRIPTION - BUILD DATE_
+#### _DESCRIPTION - 08/16/2019_
 
 #### _By **Uriel Gonzalez**_
 
