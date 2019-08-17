@@ -1,20 +1,23 @@
-@*<title>Pierre's Market</title>
+<title>Pierre's Market</title>
 
 @{
   Layout = "_Layout";
 }
 
-<h1>Hello Pierre!</h1>
+<h1><b>Hello @User.Identity.Name</b>!</h1>
 <br>
-This is your Market Program.
-Is the customer ready to place an order? I am!
-To start, press <i>Account</i>.
-<hr />
-<p>@Html.ActionLink("Account", "Index", "Account")</p>
 
 @if (User.Identity.IsAuthenticated)
 {
 <p>@Html.ActionLink("See Treat Menu", "Index", "Treats")</p>
 <p>@Html.ActionLink("See Flavor Menu", "Index", "Flavors")</p>
 }
-*@
+else
+{
+<p>This is your Market Assistant.</p>
+<p>Are you ready to place an order?</p>
+<p>I am!</p>
+<p>To start, press <i>Account</i>.</p>
+<hr />
+}
+<p>@Html.ActionLink("Account", "Index", "Account")</p>

@@ -1,4 +1,4 @@
-@*@{
+@{
   Layout = "_Layout";
 }
 
@@ -7,6 +7,7 @@
 <h2>Flavor Details</h2>
 <hr />
 <h3>@Html.DisplayFor(model => model.Description)</h3>
+<br>
 
 @if(@Model.Treats.Count == 0)
 {
@@ -34,4 +35,3 @@ else
 <p>@Html.ActionLink("Edit Treat", "Edit", new { id = Model.FlavorId })</p>
 <p>@Html.ActionLink("Back to Flavor Menu", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
-*@

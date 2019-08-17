@@ -1,4 +1,4 @@
-@*@{
+@{
   Layout = "_Layout";
 }
 
@@ -6,6 +6,8 @@
 @model List<Market.Models.Treat>;
 
 <h1>Treats</h1>
+<br>
+<h4 style="color:grey;">In this section, you are able to see our Treats Menu and add a new treat to the Menu if you like.</h4>
 <hr />
 
 @if (@Model.Count == 0)
@@ -21,4 +23,3 @@
 <p>@Html.ActionLink("Add a New Treat to the Menu", "Create")</p>
 <p>@Html.ActionLink("Flavors Menu", "Index", "Flavors")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
-*@
