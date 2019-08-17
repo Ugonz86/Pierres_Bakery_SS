@@ -78,10 +78,6 @@ namespace Market.Controllers
       return RedirectToAction("Index");
     }
 
-
-
-
-
     public ActionResult Delete(int id)
     {
       var thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
