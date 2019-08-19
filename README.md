@@ -15,9 +15,10 @@ Only logged in users can:
 1. See a Treat Menu.
 2. See a Flavor Menu.
 3. Navigate through menu and account pages.
-4. Add treats and flavors to the inventory/menu.
-5. Delete specific treats and flavors.
-6. Edit specific treats and flavors.
+4. Add treats with price to the inventory/menu.
+5. Add new flavors to the inventory.
+6. Delete specific treats and flavors.
+7. Edit specific treats and flavors.
 
 ## Setup/Installation Requirements
 
