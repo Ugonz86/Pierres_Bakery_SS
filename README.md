@@ -37,14 +37,7 @@ Only logged in users can:
     Treats > TreatId INT() PK, NN, AI + Name LONGTEXT
     FlavorTreat > TreatFlavorId INT() PK, NN, AI + FlavorID INT() + TreatId()
     ```
-5. Don't forget the following commands and the (@ star):
-    ```
-    > dotnet ef migrations add addIdentity
-    > dotnet ef migrations add addIdentity
-    > dotnet ef database update
-    ```
-
-6. Run:
+5. Run:
     ```$dotnet Run
     ```
 
