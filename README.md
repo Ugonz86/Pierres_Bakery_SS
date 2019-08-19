@@ -26,7 +26,8 @@ Only logged in users can:
     ```
     $ git clone https://github.com/Ugonz86/Pierres_Market_SS.git
     ```
-2. Open the App Settings file (Pierres_Market_SS/Market/appsettings.json) and ensure that the MySQL username and password match your MySQL credentials.
+
+2. Run dotnet restore in command line. Open the App Settings file (Pierres_Market_SS/Market/appsettings.json) and ensure that the MySQL username and password match your MySQL credentials.
 
 3. Log onto MySQL:
     ```
