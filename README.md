@@ -35,7 +35,7 @@ Only logged in users can:
 4. Create the following tables:
     ```
     Flavors > FlavorId Int() PK, NN,AI + Description LONGTEXT
-    Treats > TreatId INT() PK, NN, AI + Name LONGTEXT
+    Treats > TreatId INT() PK, NN, AI + Name LONGTEXT + Price INT
     FlavorTreat > TreatFlavorId INT() PK, NN, AI + FlavorID INT() + TreatId()
     ```
 5. Run:
