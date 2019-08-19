@@ -3,7 +3,7 @@
 }
 
 @using Market.Models;
-@model List<Market.Models.Treat>;
+@model List<Market.Models.Treat>
 
 <h1>Treats</h1>
 <br>
@@ -17,7 +17,7 @@
 
 @foreach (Treat treat in Model)
 {
-  <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</li>
+  <li>@Html.ActionLink($"{treat.Name} - ${treat.Price}", "Details", new { id = treat.TreatId })</li>
 }
 <hr />
 <p>@Html.ActionLink("Add a New Treat to the Menu", "Create")</p>

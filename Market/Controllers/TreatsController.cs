@@ -1,9 +1,15 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Market.Models;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using Market.Models;
+using Market.ViewModels;
+// using Market.Threading.Tasks;
+using System.Security.Claims;
 
 namespace Market.Controllers
 {
